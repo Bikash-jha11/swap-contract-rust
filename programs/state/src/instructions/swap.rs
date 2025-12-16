@@ -9,7 +9,7 @@ pub struct Swap<'info>{
      pub user_token_a : AccountInfo<'info>,
 
      #[account(mut)]
-     pub user_token_v : AccountInfo<'info>,
+     pub user_token_b : AccountInfo<'info>,
 
      #[account(mut)]
      pub vault_token_a : AccountInfo<'info>,
