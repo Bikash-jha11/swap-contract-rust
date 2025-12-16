@@ -1,0 +1,11 @@
+use anchor_lang::prelude::*;
+
+#[account]
+#[derive(InitSpace)]
+pub struct Pool{
+   pub vault_a :Pubkey,
+   pub vault_b:Pubkey,
+   pub bump:u8
+} 
+
+
