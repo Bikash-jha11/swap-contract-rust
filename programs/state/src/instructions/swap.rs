@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 use crate::state::pool::Pool;
-use crate::state::vault::token_program::*;
+use crate::vault::token_program::*;
 
 #[derive(Accounts)]
 pub struct Swap<'info>{
@@ -20,7 +20,7 @@ pub struct Swap<'info>{
      #[account(
         init,
         space=Pool::INIT_SPACE,
-        seeds=[b"swap"],
+        seeds=[b"swap",],
         bump = pool.bump,
      )]
      pub pool: Account<'info,Pool>,
